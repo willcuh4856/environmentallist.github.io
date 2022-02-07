@@ -1,0 +1,91 @@
+.top-container {
+  text-align: center;
+  padding-bottom: 100px;
+}
+.addBtn {
+  border: none;
+  background-color: #28621c;
+  margin: 0;
+  text-align: center;
+  font-size: 50px;
+  color: white;
+  font-family: "Dosis", sans-serif;
+  width: 12.5%;
+
+  display: inline-block;
+  float: left;
+}
+.addBtn:hover {
+  background-color: #83bd0f;
+}
+input {
+  border: none;
+  font-family: "Dosis", sans-serif;
+  margin: 0;
+  width: 37.5%;
+
+  text-align: center;
+  font-size: 50px;
+
+  display: inline-block;
+  float: left;
+  margin-left: 25%;
+}
+body {
+  background-color: #b4eeb4;
+  text-align: center;
+}
+
+li {
+  font-family: "Dosis", sans-serif;
+  font-size: 100px;
+}
+h1 {
+  font-family: "Zen Kurenaido", sans-serif;
+  font-size: 150px;
+  margin: 100px;
+  color: #008000;
+}
+
+ul li.checked {
+  background: #bee98c;
+  text-decoration: line-through;
+}
+
+/* Add a "checked" mark when clicked on */
+
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: grey;
+  padding: 15px 20px 15px 20px;
+}
+
+.close:hover {
+  background-color: #83bd0f;
+  color: white;
+}
+ul {
+  padding-left: 0;
+}
+ul li {
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  padding: 15px 8px 15px 40px;
+  list-style-type: none;
+  background: #eee;
+  font-size: 30px;
+  transition: 0.2s;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}

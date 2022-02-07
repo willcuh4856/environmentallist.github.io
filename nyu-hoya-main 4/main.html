@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/mainstyles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&family=Merriweather:ital,wght@1,300&family=Montserrat:wght@300&family=Sacramento&family=Supermercado+One&family=Zen+Kurenaido&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="top-container">
+
+    <img src="Apple/0.png" alt=0 id="myImage" width="500" height="500">
+
+      <h1 id="title">The Environmental List</h1>
+      <input
+        type="text"
+        id="inputCurrent"
+        placeholder="I want to help through..."
+      />
+      <span onclick="addItem()" class="addBtn">New Item</span>
+    </div>
+    <ul id="our-list"></ul>
+  </body>
+
+  <script defer>
+    function addItem() {
+      var newItem = document.createElement("LI");
+
+      var newText = document.getElementById("inputCurrent").value;
+      newItem.appendChild(document.createTextNode(newText));
+
+      if (newText === "") {
+        alert("You can add an empty thing!");
+      } else {
+        document.getElementById("our-list").appendChild(newItem);
+      }
+      document.getElementById("inputCurrent").value = "";
+      var span = document.createElement("SPAN");
+      var txt = document.createTextNode("\u00D7");
+      span.className = "close";
+      span.appendChild(txt);
+      newItem.appendChild(span);
+
+      for (i = 0; i < close.length; i++) {
+        close[i].onclick = function () {
+          var div = this.parentElement;
+          div.style.display = "none";
+        };
+      }
+    }
+    function deleteItem() {}
+
+    var list = document.querySelector("ul");
+    var counter = 0;
+    list.addEventListener(
+      "click",
+      function (ev) {
+        if (ev.target.tagName === "LI") {
+          ev.target.classList.toggle("checked");
+          plusImage()
+          counter = counter + 1;
+        }
+        if (counter == 5) {
+          alert("Thank You for Doing Your Part to Protect our Planet Today");
+          counter == 0;
+        }
+      },
+      false
+
+    );
+    // Create a "close" button and append it to each list item
+    var myNodelist = document.getElementsByTagName("LI");
+    var i;
+    for (i = 0; i < myNodelist.length; i++) {
+      var span = document.createElement("SPAN");
+      var txt = document.createTextNode("\u00D7");
+      span.className = "close";
+      span.appendChild(txt);
+      myNodelist[i].appendChild(span);
+    }
+
+    // Click on a close button to hide the current list item
+    var close = document.getElementsByClassName("close");
+    var i;
+    for (i = 0; i < close.length; i++) {
+      close[i].onclick = function () {
+        var newItem = document.getElementById("our-list");
+        var newText = document.getElementById("inputCurrent");
+        var item = document.getElementById(newText.value);
+        newItem.removeChild(item);
+      };
+    }
+
+    // Change Image Function
+    var newimage = 0;
+    function plusImage() {
+        newimage = newimage + 1;
+        var image = document.getElementById('myImage');
+        image.src = "Apple/" + newimage + ".png";
+        image.alt = newimage;
+    }
+
+    function minusImage() {
+        newimage = newimage - 1;
+        var image = document.getElementById('myImage');
+        image.src = "Apple/" + newimage + ".png";
+        image.alt = newimage;
+    }
+
+  </script>
+</html>

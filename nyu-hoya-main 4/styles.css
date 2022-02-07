@@ -1,0 +1,26 @@
+body {
+  background-color: #b4eeb4;
+  text-align: center;
+}
+.welcome {
+  color: #008000;
+  font-family: "Zen Kurenaido", sans-serif;
+  font-size: 150px;
+}
+.button {
+  background-color: white;
+  font-size: 30px;
+  border: none;
+  font-family: "Zen Kurenaido";
+  cursor: pointer;
+}
+h3 {
+  font-size: 30px;
+}
+h2 {
+  font-size: 30px;
+}
+.button:hover {
+  color: white;
+  background-color: #28621c;
+}
